@@ -126,6 +126,7 @@ const gameBoard = (function(p1, p2, gameDisplayer){
         p1.resetPieces();
         p2.resetPieces();
         gameDisplayer.resetDisplay();
+        gameDisplayer.displayTurn(0);
     }
 
     function checkWin(){
