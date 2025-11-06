@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --color-light: #dad8ab;
+    --color-dark: #2d3136;
+    --color-bright: #b5eecb;
+    --color-brown: #c98952;
+
+}
+
+html{
+    background-color: var(--color-light);
+}
+.outer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.grid{
+    
+    width: 70%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ttt-box{
+    margin: 5px;
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: size;
+    outline: 2px solid black;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--color-dark);
+    gap: 5px;
+    aspect-ratio: 1;
+    width: 90%;
+    height: 90%;
+    max-width: 90cqh; /* Constrain by container height */
+    max-height: 90cqw; /* Constrain by container width */
+    
+}
+
+.buttons{
+    margin: 5px;
+    background-color: var(--color-brown);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    outline: 2px solid black;
+}
+
+.buttons .turnCounter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.buttons .scoreCounter{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    text-align: center;
+    
+}
+
+.reset-score{
+    width: 5rem;
+    height: 3rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    outline: black 2px solid;
+    border-radius: 10px;
+}
+
+.tile{
+    background-color: white;
+    container-type: inline-size;
+    font-size: 15cqw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endBoxMessage{
+    margin: 0 auto;           /* Centers horizontally by default */
+    top: 20vh;
+    padding: 1em;
+    background-color: antiquewhite; 
+    border: black 2px solid;
+    border-radius: 20px;           
+}
+.dialog-btn-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: brown;
+    border: 2px black solid;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+.flexContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.winMessage{
+    text-align: center;
+}
+
+
+
+
+@media (width < 600px){
+    .endBoxMessage{
+        aspect-ratio: 1;
+        width: 40%;
+    }
+}
+
+@media (600px <= width <= 1000px){
+    .endBoxMessage{
+        aspect-ratio: 16/12;
+        width: 40%;
+    }
+}
+
+@media (width > 1000px){
+    .endBoxMessage{
+        aspect-ratio: 16/9;
+        width: 30%;
+    }
+}
