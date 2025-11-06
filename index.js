@@ -178,11 +178,12 @@ const gameBoard = (function(p1, p2, gameDisplayer){
             tileList[i].addEventListener("click", function(){
                 mostRecentMove = this.classList[0];
                 makeMove();
+                turnNumber++;
+                gameDisplayer.displayTurn(turnNumber);
                 setTimeout(function (){
                     checkWin();
                 },0);
-                turnNumber++;
-                gameDisplayer.displayTurn(turnNumber);
+                
                 
             });
         }
